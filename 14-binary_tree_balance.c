@@ -48,3 +48,10 @@ int bt_2(const binary_tree_t *tree)
 int binary_tree_balance(const binary_tree_t *tree)
 {
 	int r, l;
+
+	if (!tree)
+		return (0);
+	r = bt_2(tree->right);
+	l = bt_2(tree->left);
+	return (l - r);
+}
