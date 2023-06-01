@@ -41,8 +41,6 @@ int bt_2(const binary_tree_t *tree)
 {
 	if (!tree)
 		return (0);
-	if (tree->left == NULL && tree->right == NULL)
-		return (1);
 	else
 		return (binary_tree_height1(tree));
 }
