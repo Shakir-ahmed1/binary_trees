@@ -2,7 +2,7 @@
 /**
  * binary_tree_height1 - it counts the binary height recursively
  * @tree: the starting node
- * return: the height from the start
+ * Return: the height from the start
  */
 int binary_tree_height1(const binary_tree_t *tree)
 {
@@ -41,13 +41,15 @@ int binary_tree_height1(const binary_tree_t *tree)
 int bt_is_perfect(const binary_tree_t *tree)
 {
 	int a, b, h1, h2;
+
 	if (tree)
 	{
 		a = bt_is_perfect(tree->left);
 		b = bt_is_perfect(tree->right);
 		h1 = binary_tree_height1(tree->left);
 		h2 = binary_tree_height1(tree->right);
-		if ((((tree->right != NULL) ^ (tree->left != NULL)) || (!a || !b)) || h1 != h2)
+		if ((((tree->right != NULL) ^ (tree->left != NULL)) ||
+					(!a || !b)) || h1 != h2)
 			return (0);
 		else
 			return (1);
