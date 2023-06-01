@@ -2,7 +2,7 @@
 /**
  * binary_tree_height1 - it counts the binary height recursively
  * @tree: the starting node
- * Return: the height from the start
+ * return: the height from the start
  */
 int binary_tree_height1(const binary_tree_t *tree)
 {

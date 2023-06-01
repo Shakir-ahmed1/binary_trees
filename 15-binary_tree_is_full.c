@@ -1,8 +1,8 @@
-#include "binary_trees.h"
+#include "binary_trees.h"i
 /**
- * binary_tree_preorder - traverses the given node
+ * bt_is_full - checks if the tree is full bt
  * @tree: pointer to the root node of the tree to travers
- * @func: is a pointer to a function to call for each node
+ * Return: 0 if not full, 1 otherwise
  */
 int bt_is_full(const binary_tree_t *tree)
 {
@@ -18,6 +18,11 @@ int bt_is_full(const binary_tree_t *tree)
 	}
 	return (1);
 }
+/**
+ * binary_tree_is_full - checks if the tree is full bt
+ * @tree: pointer to the root node of the tree to travers
+ * Return: 0 if not full, 1 otherwise and 0 if the provided tree is NULL
+ */
 int binary_tree_is_full(const binary_tree_t *tree)
 {
 	if (!tree)
