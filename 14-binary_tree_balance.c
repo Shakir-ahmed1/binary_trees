@@ -15,18 +15,10 @@ int binary_tree_height1(const binary_tree_t *tree)
 		a++;
 		a += binary_tree_height1(tree->left);
 	}
-	else
-	{
-		a = 0;
-	}
 	if (tree->right)
 	{
 		b++;
 		b += binary_tree_height1(tree->right);
-	}
-	else
-	{
-		b = 0;
 	}
 	if (a > b)
 		return (a);
@@ -40,9 +32,13 @@ int binary_tree_height1(const binary_tree_t *tree)
 int bt_2(const binary_tree_t *tree)
 {
 	if (!tree)
+	{
 		return (0);
+	}
 	else
+	{
 		return (binary_tree_height1(tree));
+	}
 }
 /**
  * binary_tree_balance - it calculates the balance factor of the given tree
