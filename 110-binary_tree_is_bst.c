@@ -9,7 +9,6 @@ int binary_tree_is_bst(const binary_tree_t *tree)
 		return (0);
 	a = bt_max(tree->left);
 	b = bt_min(tree->right);
-	printf("%d == %d\n",a, b);
 	if (a < tree->n && b > tree->n)
 		return (1);
 	return (0);
