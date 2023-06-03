@@ -5,6 +5,7 @@ int bt_min(const binary_tree_t *tree);
 int binary_tree_is_bst(const binary_tree_t *tree)
 {
 	int a, b;
+
 	if (!tree)
 		return (0);
 	a = bt_max(tree->left);
@@ -14,13 +15,14 @@ int binary_tree_is_bst(const binary_tree_t *tree)
 	return (0);
 }
 /**
- * binary_tree_preorder - traverses the given node
+ * bt_max - evaluates the maximum value in binary tree
  * @tree: pointer to the root node of the tree to travers
- * @func: is a pointer to a function to call for each node
+ * Return: the largest number in the binary tree
  */
 int bt_max(const binary_tree_t *tree)
 {
 	int a, b, p;
+
 	if (tree)
 	{
 		a = bt_max(tree->left);
@@ -42,13 +44,14 @@ int bt_max(const binary_tree_t *tree)
 	}
 }
 /**
- * binary_tree_preorder - traverses the given node
+ * bt_min - evaluates the minimum value in binary tree
  * @tree: pointer to the root node of the tree to travers
- * @func: is a pointer to a function to call for each node
+ * Return: the smallest number in the binary tree
  */
 int bt_min(const binary_tree_t *tree)
 {
 	int a, b, p;
+
 	if (tree)
 	{
 		a = bt_min(tree->left);
