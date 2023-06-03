@@ -1,7 +1,11 @@
 #include "binary_trees.h"
 int bt_max(const binary_tree_t *tree);
 int bt_min(const binary_tree_t *tree);
-
+/**
+ * binary_tree_is_bst - checks if the given binary tree is a valid bst
+ * @tree: the tree to start from
+ * Return: 1 if bst, 0 otherwise
+ */
 int binary_tree_is_bst(const binary_tree_t *tree)
 {
 	int a, b;
