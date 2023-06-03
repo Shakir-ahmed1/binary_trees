@@ -18,30 +18,34 @@ bst_t *bst_insert(bst_t **tree, int value)
 			{
 				return (temp);
 			}
-			else if (((!temp->right) || (temp->right && temp->right->n > value)) && (temp->n < value))
+			else if ((!temp->right || (temp->right && temp->right->n > value)) && temp->n < value)
 			{
 				new = (bst_t *) binary_tree_node(NULL, value);
 				new->parent = temp;
 				new->right = temp->right;
 				temp->right = new;
 				new->left = NULL;
+				if (new->right)
+					new->right->parent = new;
 				return (new);
 			}
 
-			else if (((!temp->left) || (temp->left && temp->left->n < value)) && (temp->n > value))
+			else if ((!temp->left || (temp->left && temp->left->n < value)) && temp->n > value)
 			{
 				new = (bst_t *) binary_tree_node(NULL, value);
 				new->parent = temp;
 				new->left = temp->left;
 				temp->left = new;
 				new->right = NULL;
+				if (new->left)
+					new->left->parent = new;
 				return (new);
 			}
-			else if (temp->n > value)
+			else if (temp->n < value)
 			{
 				temp = temp->right;
 			}
-			else if (temp->n < value)
+			else if (temp->n > value)
 			{
 				temp = temp->left;
 			}
